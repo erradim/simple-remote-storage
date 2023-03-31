@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="criticalmediartstudio">
+        <link rel="icon" href="favicon.ico">
+        
+        <title>Remote Storage</title>
+        
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/featherlight.css" rel="stylesheet">
+          
+    </head>
+    <body id="homepage" class="main" onload = "browseFolder('')">
+
+        <header>
+            <h1>*RemoteStorageApp*</h1>
+            <button id="clickButton">Click to Browse/Download</button>
+            <button id="renameButton">Click to Rename</button>
+            <button id="deleteButton">Click to Delete</button>
+            <button id="uploadButton">Click to Upload</button>
+        </header>
+
+        <!-- readme -->
+        <div class="icon example">
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-1">readme.txt</a>
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-2">readme.txt</a>
+            <a class="readme-icon" href="#" data-featherlight="#lightbox" data-featherlight-variant="custom-lightbox glitch-child glitch-child-3">readme.txt</a>
+            <div class="hidden-lightbox lightbox-content" id="lightbox">
+                <h2>- Project Description: -</h2>
+                <p>We would like to take control of a shared folder under a remote system.</p>
+                <p>More specifically, we would like to be able to:</p>
+                <p>Browse the remote shared folder, including its sub-folders.</p>
+                <p>Rename a remote shared file or sub-folder.</p>
+                <p>Download a remote shared file.</p>
+                <p>Upload a local file to a specified path under the remote shared folder.</p>
+                <p>Delete a shared remote file.</p>
+                <h3>- Known Bugs: -</h3>
+                <p>Trying to delete a file immediately after uploading it does not work,</p>
+                <p>but reloading the page should fix the issue.</p>
+                <h3>- Credits: -</h3>
+                <p>The design of the website drew heavily from:</p>
+                <p>https://criticalmediartstudio.com/witnessing/</p>
+                <p>by criticalmediartstudio.</p>
+                <h3>- Future Plans: -</h3>
+                <p>Having the operations of the website be asynchronous.</p>
+            </div>
+        </div>
+
+        <!-- 
+        <div class="icon">
+            <a class="folder-icon" href="https://www.google.com">test-Folder_1</a>
+        </div>
+
+        <div class="icon">
+            <a class="file-icon" href="https://www.google.com">test-file 1</a>
+        </div>
+
+
+        <div class="icon">
+            <a class="folder-icon" href="https://www.google.com">test-Folder #2</a>
+        </div>
+
+        -->
+
+        <div id="warning-message" class="hidden-lightbox lightbox-content">
+            <h2>- Warning -</h2>
+            <p> You cannot perform this operation. </p>
+        </div>
+          
+<!-- 
+        <footer>
+            <p> ** </p>
+        </footer>
+-->
+        <!-- Featherlight Box -->
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="scripts/featherlight.js"></script>
+        <script src="scripts/browse-folder.js"></script>
+        <script src="scripts/element-selection.js"></script>
+        <script src="scripts/download-file.js"></script>
+        <script src="scripts/rename-file.js"></script>
+        <script src="scripts/delete-file.js"></script>
+        <script src="scripts/upload-file.js"></script>
+    </body>
+</html>
